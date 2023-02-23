@@ -12,7 +12,7 @@
   <el-tab-pane v-if="hidden">
     <span slot="label" > <i class="el-icon-chat-line-round"></i>&nbsp;Room</span>
      <div class="home">
-      <el-button @click="handleMoodDialogVisible">End the Room</el-button>
+      <el-button @click="handleMoodDialogVisible">End Room</el-button>
      <StressChatRoom/>
      </div>
      </el-tab-pane>
