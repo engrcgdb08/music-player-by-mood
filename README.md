@@ -1,4 +1,4 @@
-# aidchord
+# music-player-by-mood
 
 ## Project setup
 ```
