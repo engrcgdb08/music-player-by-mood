@@ -10,8 +10,16 @@ import NaviBar from '../components/NaviBar.vue'
 import CantSleepViewAdmin from '../views/AdminSide/CantSleepViewAdmin.vue'
 import MeditateView from '../views/MeditateView.vue'
 import ChatRoomView from '../views/JoinRoomView.vue'
+import Login from '../components/Login.vue'
 import StressChatRoom from '../components/StressChatRoom.vue'
 import GlobalRoomServer from '../components/GlobalRoomServer.vue'
+import MusicPlayerTwo from '../components/MusicPlayerTwo.vue'
+import SleepSelector from '../views/SleepSelector.vue'
+import MeditateViewSleep from '../views/MeditateViewSleep.vue'
+import ClassicalSleepView from '../views/ClassicalSleepView.vue'
+import AmbientView from '../views/AmbientView.vue'
+import FocusSelector from '../views/FocusSelector.vue'
+import MeditateViewFocus from '../views/MeditateViewFocus.vue'
 
 
 
@@ -33,7 +41,7 @@ const routes = [
     }
 },
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -93,6 +101,55 @@ const routes = [
     path: '/globalroom',
     name: 'globalroom',
     component: GlobalRoomServer
+    
+  },
+  {
+    path: '/musicplayertwo',
+    name: 'musicplayertwo',
+    component: MusicPlayerTwo
+    
+  },
+  {
+    path: '/sleepselector',
+    name: 'sleepselector',
+    component: SleepSelector
+    
+  },
+  {
+    path: '/meditatesleep',
+    name: 'meditatesleep',
+    component: MeditateViewSleep
+    
+  },
+  {
+    path: '/classicalsleep',
+    name: 'classicalsleep',
+    component: ClassicalSleepView
+    
+  },
+  {
+    path: '/ambient',
+    name: 'ambient',
+    component: AmbientView
+    
+  },
+  {
+    path: '/focusselector',
+    name: 'focusselector',
+    component: FocusSelector
+    
+  },
+  {
+    path: '/meditatefocus',
+    name: 'meditatefocus',
+    component: MeditateViewFocus
+    
+  },
+
+  {
+    path: '/',
+    name: 'login',
+    component: Login
     
   },
 

@@ -22,7 +22,7 @@
     align="center"
    
     el-fade-in-linear
-    content="Classical music has been shown to be one of the most calming genres of music. It has been found to be helpful in managing stress due to its slow tempo and intricate harmonies. Studies have shown that listening to classical music can lead to decreased levels of cortisol, a hormone associated with stress.">
+    content="If testing anxiety causes sleepless nights, classical music can help soothe insomnia. A team of researchers at the University of Toronto found that tuning into classical music before bedtime helped people fall asleep faster and stay asleep longer.">
     <el-button slot="reference" type="primary" style="margin:1%; align:center;" plain @click="goToClassicalPage"><img style="width:15%; height: auto;" src="../assets/classic.png"><br/>Classical Music</el-button>
   </el-popover>
 
@@ -35,7 +35,7 @@
     align="center"
    
     el-fade-in-linear
-    content="Meditation can give you a sense of calm, peace and balance that can benefit both your emotional well-being and your overall health. You can also use it to relax and cope with stress by refocusing your attention on something calming. Meditation can help you learn to stay centered and keep inner peace.">
+    content="Meditation may help you sleep better. As a relaxation technique, it can quiet the mind and body while enhancing inner peace.">
     <el-button slot="reference" type="primary" style="margin:1%; align:center;" plain @click="goToMeditatePage"><img style="width:15%; height: auto;" src="../assets/meditate.png"><br/>Meditate</el-button>
   </el-popover>
 
@@ -81,11 +81,11 @@ export default {
     
      goToMeditatePage () {
       this.loading = true
-     this.$router.push('/meditate')
+     this.$router.push('/meditatesleep')
      },
      goToClassicalPage(){
        this.loading = true
-     this.$router.push('/stress')
+     this.$router.push('/classicalsleep')
      }
 
   }

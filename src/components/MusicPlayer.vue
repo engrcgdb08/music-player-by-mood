@@ -103,6 +103,19 @@ export default {
 						title: "Classical Music",
 						artist: "Classical Music"
 					},
+
+					{
+						id: "27901400",
+						title: "Beethoven Piano Sonata No. 8 Sad Third Movement",
+						artist: "Beethoven"
+					},
+					{
+						id: "329800122",
+						title: "Waltz of Flowers ",
+						artist: "Tchaikovsky"
+					},
+
+		
 				
 				],
 				Mode: [
@@ -211,11 +224,13 @@ export default {
 				this.stopAudio();
 			}
 			this.currentSong = index;
-
+ 
 			var audioFile = "http://music.163.com/song/media/outer/url?id=" + 
 								this.musicPlaylist[this.currentSong].id + ".mp3";
 			this.audio = new Audio(audioFile);
 
+
+           
 			// var lyricFile = "http://music.163.com/api/song/media?id=" + this.musicPlaylist[this.currentSong].id;
 			// this.formatLyric(lyricFile);
 
