@@ -6,10 +6,7 @@
       <div class="header">
        <img src="../assets/aidchordlogo.png" style="width:100px; height: auto; border-radius: 50%; background: white; margin: 1%;"> 
       </div>   
-      <div class="button-text" >
-    <el-button  style="color:white;">Login</el-button>
-     <el-button style="color:white;">Sign Up</el-button>
-      </div>
+
     </div>
    </el-card>
     <el-card class="box-card">
@@ -58,7 +55,7 @@ choose one of the emoticons that suite your mood</span>
   Your mood: <span style="color:#0091FA;">{{moodBefore}}</span>
   <br/><br/>
   Music Genre Recommendation: <span v-if="this.moodBefore === 'Sob' || this.moodBefore === 'Weary' || this.moodBefore === 'Sad' || this.moodBefore === 'Meh'" style="color:#0091FA;">Jazz , Classical , Instrumental Music</span>
-  <span v-else-if="this.moodBefore === 'Nervous' || this.moodBefore === 'Anxious' || this.moodBefore === 'Angry'" style="color:#0091FA;">Meditation Music</span>
+  <span v-else-if="this.moodBefore === 'Nervous' || this.moodBefore === 'Anxious' || this.moodBefore === 'Angry'" style="color:#0091FA;">Meditation Music , Ambient Music</span>
   <span slot="footer" class="dialog-footer" style="flex 2 1 auto;">
     <el-button  @click="handleRoomDialogVisible">Join Room Instead &nbsp;<i class="el-icon-chat-line-round"></i></el-button>
      &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
@@ -174,13 +171,23 @@ export default {
      onSubmit() {
         try {
           this.loading = true
-          if(this.title === 'GETTING STRESS OR AXIETY PAGE' || this.title === 'CAN`T SLEEP' || this.title === 'WANT TO FOCUS' ){
-          this.goToAnxiousStressPage(this.$router.push('/calming'))
+          if(this.title === 'GETTING STRESS OR AXIETY PAGE' ){
+           this.$router.push('/calming')
           // } else if (this.title === 'CAN`T SLEEP') {
           //  this.goToCantSleepPage(this.$router.push('/cantsleep')) 
           // } else if (this.title === 'WANT TO FOCUS') {
           //     this.goToFocusPage(this.$router.push('/focus')) 
           // }
+          } else if (this.title === 'CAN`T SLEEP'){
+
+           this.$router.push('/sleepselector')
+
+          }
+
+          else if (this.title === 'WANT TO FOCUS'){
+
+           this.$router.push('/focusselector')
+
           }
           this.moodDialogVisible = false
           }
@@ -201,6 +208,7 @@ export default {
       this.loading = true
      this.$router.push('/meditate')
      },
+
 
      handleStressOrAnxietyPage(){
       this.reset()

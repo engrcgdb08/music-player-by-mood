@@ -10,9 +10,9 @@
     </div>
    </el-card>
   <div class="tabs">
-    <el-divider>This is Meditate Music Room (Stress and Anxiety)</el-divider>
-     <NaviBarMeditate/>
-  </div>
+     <el-divider>This is Classical Music Room (Sleep)</el-divider>
+     <NaviBarClassicalSleep/>
+</div>
   </div>
     </div>
     
@@ -23,12 +23,12 @@
 
 <script>
 // @ is an alias to /src
-import NaviBarMeditate from '@/components/NaviBarMeditate.vue'
+import NaviBarClassicalSleep from '@/components/NaviBarClassicalSleep.vue'
 
 export default {
-  name: 'MeditateView',
+  name: 'ClassicalSleepView',
   components: {
-    NaviBarMeditate
+    NaviBarClassicalSleep
   },
 
   data(){
@@ -61,5 +61,9 @@ export default {
 .button-nav{
    display: flex;
   justify-content: center;
+}
+
+.el-card__body, .el-main{
+  padding: 5px;
 }
 </style>>

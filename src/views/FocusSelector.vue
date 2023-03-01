@@ -22,7 +22,7 @@
     align="center"
    
     el-fade-in-linear
-    content="Classical music has been shown to be one of the most calming genres of music. It has been found to be helpful in managing stress due to its slow tempo and intricate harmonies. Studies have shown that listening to classical music can lead to decreased levels of cortisol, a hormone associated with stress.">
+    content="Meditation is a helpful tool for people trying to improve their focus and memory. It can help you zero in on your goals and make you more productive.">
     <el-button slot="reference" type="primary" style="margin:1%; align:center;" plain @click="goToClassicalPage"><img style="width:15%; height: auto;" src="../assets/classic.png"><br/>Classical Music</el-button>
   </el-popover>
 
@@ -35,10 +35,22 @@
     align="center"
    
     el-fade-in-linear
-    content="Meditation can give you a sense of calm, peace and balance that can benefit both your emotional well-being and your overall health. You can also use it to relax and cope with stress by refocusing your attention on something calming. Meditation can help you learn to stay centered and keep inner peace.">
+    content="Meditation is a helpful tool for people trying to improve their focus and memory. It can help you zero in on your goals and make you more productive.">
     <el-button slot="reference" type="primary" style="margin:1%; align:center;" plain @click="goToMeditatePage"><img style="width:15%; height: auto;" src="../assets/meditate.png"><br/>Meditate</el-button>
   </el-popover>
 
+<el-popover
+    class="popover"
+    placement="bottom"
+    title="Ambient"
+    width="300"
+    trigger="hover"
+    align="center"
+   
+    el-fade-in-linear
+    content="BASTs research also confirms the benefits of ambient music. They found that listening to ambient music for 13 minutes increases clarity, productivity, and confidence. Ambient music is slower-tempo beats with no lyrics. Think classical or smooth jazz the next time you want to juice your brain during a work session">
+    <el-button slot="reference" type="primary" style="margin:1%; align:center;" plain @click="goToAmbientPAge"><img style="width:15%; height: auto;" src="../assets/ambient.png"><br/>Ambient</el-button>
+  </el-popover>
 
     </div>
 
@@ -81,11 +93,15 @@ export default {
     
      goToMeditatePage () {
       this.loading = true
-     this.$router.push('/meditate')
+     this.$router.push('/meditatefocus')
      },
      goToClassicalPage(){
        this.loading = true
-     this.$router.push('/stress')
+     this.$router.push('/focus')
+     },
+     goToAmbientPAge(){
+       this.loading = true
+     this.$router.push('/ambient')
      }
 
   }

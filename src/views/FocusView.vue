@@ -10,8 +10,8 @@
     </div>
    </el-card>
   <div class="tabs">
-    <el-divider>This is Wanted to Focus Music Room</el-divider>
-     <NaviBar/>
+    <el-divider>This is Classical Music ( Focus )</el-divider>
+     <NaviBarFocusClassic/>
 </div>
   </div>
     </div>
@@ -23,12 +23,12 @@
 
 <script>
 // @ is an alias to /src
-import NaviBar from '@/components/NaviBar.vue'
+import NaviBarFocusClassic from '@/components/NaviBarFocusClassic.vue'
 
 export default {
   name: 'FocusView',
   components: {
-    NaviBar
+    NaviBarFocusClassic
   },
 
   data(){

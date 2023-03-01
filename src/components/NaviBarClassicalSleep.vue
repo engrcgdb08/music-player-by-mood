@@ -4,7 +4,7 @@
   <el-tab-pane>
     <span slot="label"><el-button @click="roomDialogVisible = true" :disabled="hidden"> Create Room </el-button>&nbsp;&nbsp;<i class="el-icon-headset"></i>&nbsp; Songs</span>
     <div class="home">
-  <MusicPlayerTwo/>
+  <MusicPlayerClassicalSleep/>
      
         <!-- <MusicPlayer/> -->
   </div> 
@@ -130,12 +130,12 @@
 
 <script>
 // import MusicPlayer from '@/components/MusicPlayer.vue'
-import MusicPlayerTwo from '@/components/MusicPlayerTwo.vue'
+import MusicPlayerClassicalSleep from '@/components/MusicPlayerClassicalSleep.vue'
 import StressChatRoom from '@/components/StressChatRoom.vue'
   export default {
     components: {
 //  MusicPlayer,
- MusicPlayerTwo,
+ MusicPlayerClassicalSleep,
  StressChatRoom,
 
     },
